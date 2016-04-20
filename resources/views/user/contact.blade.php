@@ -6,11 +6,11 @@
 
 
 
-  @if (session('status'))
+  <!--@if (session('status'))
     <div class="alert alert-success">
         {{ session('status') }} 
      
-      @endif
+      @endif-->
      <section  style="color:#808080;">
 	<form  method="post" >	
                      <input  type="hidden" name="_token" value="{!! csrf_token() !!}">
