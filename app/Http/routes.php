@@ -13,12 +13,14 @@
 Route::group(['prefix'=>'api/'],function(){ 
     Route::resource ('patients','PatientApiController'); 
     Route::resource ('diagnosis','PatientApiController'); 
+    
 
 }); 
  
 
 Route::get('/details','PagesController@patientDetails'); 
 Route::get('/diagnosis','PagesController@patientDiagnosis'); 
+Route::get('/searchp','PagesController@search'); 
 
 
 
@@ -135,6 +137,16 @@ Route::get('/search',[
 Route::post('/search',[
     'middleware'=>'auth',
     'uses'=>'UsersController@searchPatient'
+]);
+
+Route::get('/contact',[
+    'middleware'=>'auth',
+    'uses'=>'UsersController@contactAdmin'
+]);
+
+Route::post('/contact',[
+    'middleware'=>'auth',
+    'uses'=>'UsersController@sendMessage'
 ]);
 
 

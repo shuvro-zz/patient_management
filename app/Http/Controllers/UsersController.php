@@ -166,6 +166,29 @@ class UsersController extends Controller
              return view ('user.search')->with('patient',$patient); 
 
   }
+  
+  public function contactAdmin() 
+  { 
+    $user= User::where('userType','=', 'admin')->get() ; 
+    return view ('user.contact')->with('user',$user);
+  }
+  
+  public function sendMessage() 
+  { 
+      
+    $user= User::where('userType','=', 'admin')->get() ; 
+    
+     $msg=$_POST['message']; 
+     $token=NULL; 
+     Mail::send('email.verify', ['token' => $token], function($message)  {
+            $message->to('valeednaveed@gmail.com', 'Waleed');
+                $message->subject('Verify your email address');
+        });
+        
+      return view ('user.contact')->with('user',$user)->with('status', 'Message has been sent to admins email id ');
+
+
+  }
    
  
 }

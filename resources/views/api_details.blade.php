@@ -15,7 +15,10 @@
           var tblRow = "<tr>" + "<td>" + f.id + "</td>" +
            "<td>" + f.name + "</td>" + "<td>" + f.email + "</td>" + "<td>" + f.contact + "</td>" +  "<td>" + f.CNIC + "</td>" +  "<td>" + f.age + "</td>" +  "<td>" + f.sex + "</td>" +  "<td>" + f.bloodGroup+ "</td>" +"</tr>"
            $(tblRow).appendTo("#userdata tbody");
-     });
+          
+           
+           
+     } );
 
    });
 
@@ -98,6 +101,7 @@ input:focus {
 
 <body>
  <div class="container"> 
+   
                     <table class="table" id="userdata">
                         <thead>
                             <tr>

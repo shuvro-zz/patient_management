@@ -52,12 +52,20 @@ class PagesController extends Controller
     
     public function patientDetails() 
     { 
+       
         return view('api_details'); 
     }
+    
+    
    
     public function patientDiagnosis() 
     { 
         return view('api_diagnosis'); 
+    }
+    
+    public function search() 
+    { 
+        return view('api_search');
     }
    
         

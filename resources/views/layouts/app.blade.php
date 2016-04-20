@@ -124,6 +124,7 @@
                                             <li class="{{ Request::is('add') ? 'active' : '' }}" ><a href="\add">Add</a></li> 
                                             <li class="{{ Request::is('patients') ? 'active' : '' }}" ><a href="\patients">View</a></li> 
                                             <li class="{{ Request::is('search') ? 'active' : '' }}" ><a href="\search">Search</a></li> 
+                                                                                        <li class="{{ Request::is('contact') ? 'active' : '' }}" ><a href="\contact">Contact</a></li> 
 
                                         </ul>
                                         <ul class="nav navbar-nav navbar-right">
