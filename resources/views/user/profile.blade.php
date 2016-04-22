@@ -19,36 +19,15 @@ color: #999;
 	
 	<div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2">
             <div class="well well-sm">
                 <div class="row">
-                    <div class="col-md-4">
-                        
-                        
-                                           <br> 
-                                           <br> 
-                                         <img src="\uploads\{!!$user->id.".jpg"!!}" alt="Upload Photo" onerror="this.src='\site-content\images\home.jpg'" style="
-
-                                                       object-fit: cover;
-                                                          width: 250px;
-                                                          height:250px;
-                                                           border: 1px solid #ddd;
-                                                            border-radius: 4px;
-                                                            padding: 5px;
-
-
-
-                                                                                 ">
-                                        
-                        
-                        
-                        
-                        
-                        <!--<img src="\uploads\{!!$user->id.".jpg"!!}"  alt="" class="img-rounded img-responsive" />-->
+                    <div class="col-sm-6 col-md-4">
+                        <img src="\uploads\{!!$user->id.".jpg"!!}"  alt="" class="img-rounded img-responsive" />
                     </div>
-                    <div class="col-md-5 col-md-offset-1">
-                        <h1>
-						{!!$user->name!!}</h1>
+                    <div class="col-sm-6 col-md-8">
+                        <h4>
+						{!!$user->name!!}</h4>
                         <small><cite title="Lahore, Pakistan">Lahore, Pakistan <i class="glyphicon glyphicon-map-marker">
                         </i></cite></small>
                         <p>
@@ -88,8 +67,6 @@ color: #999;
                             
                             
                         </div>
-                                                    <br><br>
-
                     </div>
                 </div>
             </div>

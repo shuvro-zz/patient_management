@@ -14,15 +14,18 @@ class CreatePatientsTable extends Migration
     {
         Schema::create('patients', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('slug')->nullable() ;
-            $table->string('name',255);
-            $table->string('email',225)->nullable();
-            $table->string('contact',12)->nullable();
-            $table->string('CNIC',13)->nullable();
+            $table->string('slug')->nullable() ; 
+            $table->string('name',255); 
+            $table->string('email',225)->nullable(); 
+            $table->string('contact',12)->nullable();  
+            $table->string('CNIC',13)->nullable(); 
             $table->integer('age');
             $table->char('sex',1);//mfo
-           
-           
+            $table->char('bloodGroup',2);
+            $table->text('disease')->nullable(); 
+            $table->text('allergy')->nullable();
+            $table->text('medicine')->nullable();
+            $table->text('diagnosis')->nullable();
             $table->text('comments')->nullable();
             $table->timestamps();
         });

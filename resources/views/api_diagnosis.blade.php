@@ -12,9 +12,10 @@
 
    var people = [];
 
-   $.getJSON('http://localhost:8000/api/diagnosis', function(data) {
+   $.getJSON('http://localhost:8000/api/patients', function(data) {
        $.each(data.pdata, function(i, f) {
-          var tblRow = "<tr>" + "<td>" + f.id + "</td>" + "<td>" + f.diagnosis + "</td>" +"</tr>"
+          var tblRow = "<tr>" + "<td>" + f.id + "</td>" +
+           "<td class=\"name\">" + f.name + "</td>" + "<td>" + f.diagnosis + "</td>" +"</tr>"
            $(tblRow).appendTo("#userdata tbody");
      });
 
@@ -107,7 +108,7 @@ input:focus {
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                
+                                <th>Name</th>
                                 <th>Diagnosis</th>
                                 
                          
