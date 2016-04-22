@@ -72,9 +72,9 @@
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label for="title" class="col-lg-2 control-label">Title</label>
+                                    <label for="title" class="col-lg-2 control-label">Blood Group</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" id="bloodgroup" name="bloodgroup" value="{!! $patient->bloodGroup!!}">
+                                        <input type="text" class="form-control" id="bloodgroup" name="bloodgroup" value="{!! $mh->bloodGroup!!}">
                                     </div>
                                 </div>
                                 
@@ -82,21 +82,21 @@
                                 <div class="form-group">
                                     <label for="content" class="col-lg-2 control-label">Allergy</label>
                                     <div class="col-lg-10">
-                                        <textarea class="form-control" rows="3" id="allergy" name="allergy">{!! $patient->allergy !!}</textarea>
+                                        <textarea class="form-control" rows="3" id="allergy" name="allergy">{!! $mh->allergy !!}</textarea>
                                     </div>
                                 </div>
                                 
                                 <div class="form-group">
                                     <label for="content" class="col-lg-2 control-label">Medicine</label>
                                     <div class="col-lg-10">
-                                        <textarea class="form-control" rows="3" id="medicine" name="medicine">{!! $patient->medicine !!}</textarea>
+                                        <textarea class="form-control" rows="3" id="medicine" name="medicine">{!! $mh->medicine !!}</textarea>
                                     </div>
                                 </div>
                                 
                                 <div class="form-group">
                                     <label for="content" class="col-lg-2 control-label">Diagnosis</label>
                                     <div class="col-lg-10">
-                                        <textarea class="form-control" rows="3" id="diagnosis" name="diagnosis">{!! $patient->diagnosis !!}</textarea>
+                                        <textarea class="form-control" rows="3" id="diagnosis" name="diagnosis">{!! $d->diagnosis !!}</textarea>
                                     </div>
                                 </div>
                                 

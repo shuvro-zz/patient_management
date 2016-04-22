@@ -11,8 +11,8 @@
 |
 */
 Route::group(['prefix'=>'api/'],function(){ 
-    Route::resource ('patients','PatientApiController'); 
-    Route::resource ('diagnosis','PatientApiController'); 
+    Route::resource ('details','detailsWebService'); 
+    Route::resource ('diagnosis','diagnosisWebService'); 
     
 
 }); 
@@ -20,9 +20,14 @@ Route::group(['prefix'=>'api/'],function(){
 
 Route::get('/details','PagesController@patientDetails'); 
 Route::get('/diagnosis','PagesController@patientDiagnosis'); 
-Route::get('/searchp','PagesController@search'); 
+//Route::get('/searchp','PagesController@search'); 
 
+Route::get('/x',function()
+{ 
+    return view ('search_details'); 
+}); 
 
+Route::post('/searchp',array('uses' => 'PatientApiController@searchPatient')); 
 
 
 

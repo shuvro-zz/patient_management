@@ -10,10 +10,10 @@
 
    var people = [];
 
-   $.getJSON('http://localhost:8000/api/patients', function(data) {
+   $.getJSON('http://localhost:8000/api/details', function(data) {
        $.each(data.pdata, function(i, f) {
           var tblRow = "<tr>" + "<td>" + f.id + "</td>" +
-           "<td>" + f.name + "</td>" + "<td>" + f.email + "</td>" + "<td>" + f.contact + "</td>" +  "<td>" + f.CNIC + "</td>" +  "<td>" + f.age + "</td>" +  "<td>" + f.sex + "</td>" +  "<td>" + f.bloodGroup+ "</td>" +"</tr>"
+           "<td>" + f.name + "</td>" + "<td>" + f.email + "</td>" + "<td>" + f.contact + "</td>" +  "<td>" + f.CNIC + "</td>" +  "<td>" + f.age + "</td>" +  "<td>" + f.sex + "</td>" + "</tr>"
            $(tblRow).appendTo("#userdata tbody");
           
            
@@ -112,7 +112,7 @@ input:focus {
                                 <th>CNIC</th>
                                 <th>Age</th>
                                 <th>Gender</th>
-                                <th>Blood Group</th>
+                                
                          
                             </tr>
 

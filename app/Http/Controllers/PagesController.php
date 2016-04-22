@@ -65,7 +65,7 @@ class PagesController extends Controller
     
     public function search() 
     { 
-        return view('api_search');
+        return view('search_details');
     }
    
         
